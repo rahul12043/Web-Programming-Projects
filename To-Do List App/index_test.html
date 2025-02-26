@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Debug</title>
+</head>
+<body>
+  <input type="text" id="task-input" placeholder="Enter task">
+  <button id="add-task-btn">Add Task</button>
+  <ul id="task-list"></ul>
+
+  <script>
+    const taskInput = document.getElementById("task-input");
+    const addTaskBtn = document.getElementById("add-task-btn");
+    const taskList = document.getElementById("task-list");
+
+    addTaskBtn.addEventListener("click", function () {
+      const taskText = taskInput.value.trim();
+      console.log("Task input:", taskText); // Debugging log
+
+      if (taskText !== "") {
+        const li = document.createElement("li");
+        li.textContent = taskText;
+        taskList.appendChild(li);
+        taskInput.value = "";
+      } else {
+        alert("Please enter a task!");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body{
+            margin:0;
+            font-family: sans-serif;
+            background: #f5f5f5;
+        }
+
+        .gallery{
+            display: grid;
+            grid-template-columns: repear(auto-fit,minmax(150px,1fr));
+            gap:10px;
+            padding:20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery div {
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            display: block;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1 style="text-align:center; font-size:175px">Photo Gallery</h1>
+
+    <div class="gallery">
+        <div><img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-cool-sphere-1170x780.jpg" alt="Photo 1"></div>
+        <div><img src="https://gratisography.com/wp-content/uploads/2024/10/gratisography-foliage-face-1036x780.jpg" alt="Photo 2"></div>
+        <div><img src="https://gratisography.com/wp-content/uploads/2023/09/gratisography-duck-doctor-free-stock-photo-1170x780.jpg" alt="Photo 3"></div>
+        <div><img src="https://gratisography.com/wp-content/uploads/2023/06/gratisography-happy-coffee-free-stock-photo-1170x780.jpg" alt="Photo 4"></div>
+        <div><img src="https://gratisography.com/wp-content/uploads/2023/06/gratisography-tiny-parrot-free-stock-photo-1170x780.jpg" alt="Photo 5"></div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(195, 227, 237);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 300px;
+            background: whitesmoke;
+            border-radius: 5px;
+            border: 50px;
+        }
+
+        .card .profile-img{
+            width: 100%;
+            height: 150px;
+            background: lightblue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:5px;
+        }
+
+        .card .profile-img img{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .card .details{
+            padding: 2px;
+            background-color: whitesmoke;
+        }
+
+        .card .details h2{
+            margin:0;
+            color: black;
+        }
+        
+        .card .details p{
+            font-size: 16px;
+            color:black;
+        }
+
+        .card .Links a {
+                text-decoration: none;
+                color: whitesmoke;
+                background: hsl(211, 100%, 50%);
+                display: inline-block;
+                padding: 10px 30px;
+                border-radius: 5px;
+                margin:5px;
+        }
+
+        .card .Links a:hover {
+            background: black;
+          }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="card">
+        <div class="profile-img">
+            <img src="https://media.istockphoto.com/id/1389898294/photo/man-with-hairless-mustache-and-glasses-cute-iconic-character-3d-rendering.jpg?s=612x612&w=is&k=20&c=kgMezkDdLMgTSuKoN6sHVTQl-i5tllj8u_dNbyiv_50=" alt="Profile">
+        </div>
+        <div class="details">
+            <h2>Rahul Sinha</h2>
+            <p>Aspiring Web Developer</p>
+        </div>
+        <div class="Links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Github</a>
+        </div>
+    </div>
+
+</body>
+
+

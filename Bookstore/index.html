@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readera - Home</title>
+    <style>
+      body {
+        margin-top: 0;
+        margin-left: 0;
+      }
+      h1 {
+        /* color: #312c2c; */
+        color: #202020;
+        text-align: right;
+        font-family: garamond;
+        margin: 0;
+      }
+      h2 {
+        color: #202020;
+        font-family: garamond;
+      }
+      p {
+        font-size: 1.2em;
+        line-height: 1.2;
+        color: #ffffff;
+        font-family: garamond;
+      }
+      .welcome{
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 0.02px;
+        text-align: right;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+        /* background-color: #ff7700; */
+        background-image: linear-gradient(to bottom right, #ff8921, #ff7700);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+      
+      .welcome nav{
+        background-image: linear-gradient(to top right, #ff8921, #ff7700);
+      }
+      
+      .welcome img {
+        cursor: pointer;
+      }
+      .welcome img:hover{
+        scale: +10px;
+      }
+
+      /* Table Styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        /* color: #312c2c; */
+        color: #202020;
+      }
+      tr:hover {
+        background-color: #f1f1f1;
+        transition: all 0.1s ease;
+      }
+      td:hover {
+        color: #ffa974;
+        border-bottom-color: #ff7700;
+        transition: all 0.1s ease;
+      }
+      th {
+        background-color: #ff7700;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      ul,
+      ol {
+        margin: 20px 0;
+        padding-left: 40px;
+      }
+      ul {
+        list-style-type: square;
+      }
+      ol {
+        list-style-type: decimal;
+      }
+      li {
+        margin: 10px 0;
+        font-size: 1.1em;
+        color: #34495e;
+      }
+
+      a {
+        color: #34495e;
+      }
+
+      a:visited {
+        color: #ffd900c5;
+      }
+      a:hover {
+        color: #ffa974;
+      }
+      button {
+        color: black;
+        background-color: #ff7700;
+        border-radius: 10px;
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.196);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff6200;
+        font-style: italic;
+        box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.361);
+        transition: all 0.3s ease;
+      }
+
+      .catalog_title{
+            text-align: center;
+            color: #ff7700;
+            font-family: garamond;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+      }
+      .catalog_title::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #ff7700;
+            border-radius: 2px;
+      }
+      .genres {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            padding-top: 0;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .genres_title {
+            text-align: center;
+            color: #ff7700;
+            font-family: garamond;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .genres_title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #ff7700;
+            border-radius: 2px;
+        }
+
+        .genres_list {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            gap: 20px;
+        }
+
+        .genre_item {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .genre_link {
+            display: block;
+            text-decoration: none;
+            padding: 15px 20px;
+            background-color: white;
+            color: #ff7700;
+            border-radius: 10px;
+            font-family: garamond;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .genre_link:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .bestsellers{
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            padding-top: 0;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .bestsellers-title {
+            text-align: center;
+            color: #ff7700;
+            font-family: garamond;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .bestsellers-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #ff7700;
+            border-radius: 2px;
+        }
+
+        .bestsellers-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .bestseller-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .bestseller-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .bestseller-rank {
+            background-color: #ff7700;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        .bestseller-title {
+            flex-grow: 1;
+            font-family: garamond;
+            font-size: 1.3em;
+            color: #333;
+            padding: 15px 0;
+        }
+       
+    </style>
+
+  </head>
+  <body>
+    <div class="welcome">
+      <a href="content.html"
+        ><img
+          src="https://i0.wp.com/www.pilgrimafrica.org/wp-content/uploads/2020/12/kisspng-vector-graphics-book-stock-illustration-logo-research-vector-book-transparent-amp-png-clipart-5cce8c440022e9.3914588515570401960006.png?resize=300%2C300&ssl=1"
+          alt="Bookstore Logo"
+          style="float: left; padding-left: 10px"
+          width="90"
+          height="90"
+      /></a>
+      <h1>Welcome to Readera!</h1>
+      <p>
+        Your favorite online bookstore. Explore our vast collection of books
+        across various genres.
+      </p>
+      
+      <nav>
+        <ul style="list-style: none; margin: 0; display: flex; justify-content: space-around;">
+          <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+          <li><a href="catalog.html" style="color: white; text-decoration: none; font-weight: bold;">Catalog</a></li>
+          <li><a href="genres.html" style="color: white; text-decoration: none; font-weight: bold;">Genres</a></li>
+          <li><a href="bestsellers.html" style="color: white; text-decoration: none; font-weight: bold;">Bestsellers</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- Table for Book Details -->
+     <div class="catalog">
+    <h2 class="catalog_title" style="font-family: garamond">Book Catalog</h2>
+</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The Alchemist</td>
+          <td>Paulo Coelho</td>
+          <td>1988</td>
+          <td>Rs. 672</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>To Kill a Mockingbird</td>
+          <td>Harper Lee</td>
+          <td>1960</td>
+          <td>Rs. 329</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>Atomic Habits</td>
+          <td>James Clear</td>
+          <td>2018</td>
+          <td>Rs. 472</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>Sapiens: A Brief History of Humankind</td>
+          <td>Yuval Noah Harari</td>
+          <td>2011</td>
+          <td>Rs. 479</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>The Monk Who Sold His Ferrari</td>
+          <td>Robin Sharma</td>
+          <td>1997</td>
+          <td>Rs. 500</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>Ikigai: The Japanese Secret to a Long and Happy Life</td>
+          <td>Héctor García and Francesc Miralles</td>
+          <td>2016</td>
+          <td>Rs. 350</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>1984</td>
+          <td>George Orwell</td>
+          <td>1949</td>
+          <td>Rs. 299</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>The Power of Now</td>
+          <td>Eckhart Tolle</td>
+          <td>1997</td>
+          <td>Rs. 450</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>Rich Dad Poor Dad</td>
+          <td>Robert Kiyosaki</td>
+          <td>1997</td>
+          <td>Rs. 399</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+        <tr>
+          <td>Think and Grow Rich</td>
+          <td>Napoleon Hill</td>
+          <td>1937</td>
+          <td>Rs. 299</td>
+          <td><button>Buy Now!</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Unordered List for Genres -->
+    <div class="genres">
+        <h2 class="genres_title">Genres</h2>
+        <ul class="genre_list">
+            <li class="genre_item">
+                <a href="fiction.html" target="content" class="genre_link">Fiction</a>
+            </li>
+            <li class="genre_item">
+                <a href="non-fiction.html" target="content" class="genre_link">Non-Fiction</a>
+            </li>
+            <li class="genre_item">
+                <a href="sci-fi.html" target="content" class="genre_link">Science Fiction</a>
+            </li>
+            <li class="genre_item">
+                <a href="self-help.html" target="content" class="genre_link">Self-Help</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Ordered List for Bestsellers -->
+    <div class="bestsellers">
+        <h2 class="bestsellers-title">Bestsellers</h2>
+        <ol class="bestsellers-list">
+            <li class="bestseller-item">
+                <div class="bestseller-rank">1</div>
+                <div class="bestseller-title">The Alchemist</div>
+            </li>
+            <li class="bestseller-item">
+                <div class="bestseller-rank">2</div>
+                <div class="bestseller-title">Atomic Habits</div>
+            </li>
+            <li class="bestseller-item">
+                <div class="bestseller-rank">3</div>
+                <div class="bestseller-title">Sapiens: A Brief History of Humankind</div>
+            </li>
+            <li class="bestseller-item">
+                <div class="bestseller-rank">4</div>
+                <div class="bestseller-title">To Kill a Mockingbird</div>
+            </li>
+            <li class="bestseller-item">
+                <div class="bestseller-rank">5</div>
+                <div class="bestseller-title">The Monk Who Sold His Ferrari</div>
+            </li>
+        </ol>
+    </div>
+  </body>
+</html>
